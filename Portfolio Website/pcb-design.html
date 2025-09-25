@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Custom PCB Design in Altium - Project Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+            color: #222;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+        .project-header {
+            background: #124688;
+            color: white;
+            padding: 1rem 0;
+            margin-bottom: 1rem;
+        }
+        .project-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 1rem;
+            color: #000000;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin: 1rem 0;
+        }
+        .project-details {
+            margin: 2rem 0;
+        }
+        .tech-stack {
+            background: #f8f9fa;
+            padding: 0;
+            border-radius: 4px;
+            margin: 0 0;
+        }
+        .image-container {
+            display: flex;
+            gap: 20px;
+            margin: 1rem 0;
+            justify-content: center;
+            max-width: 100%;
+        }
+        .image-container img {
+            flex: 0 1 45%;  /* Changed from flex: 1 to flex: 0 1 45% */
+            max-width: 45%; /* Added max-width */
+            height: auto;
+            object-fit: contain; /* Changed from cover to contain */
+            margin: 0;
+        }
+        .image-with-caption {
+            text-align: center;
+            margin: 1rem 0;
+        }
+        .caption {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 0.5rem;
+        }
+        .image-container .image-with-caption {
+            flex: 0 1 45%;
+        }
+        .image-container .image-with-caption img {
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="project-header">
+        <div class="container">
+            <h1>Custom PCB Design in Altium</h1>
+        </div>
+    </div>
+    
+    <div class="container">
+        <a href="Website.html" class="back-link">← Back to Portfolio</a>
+        
+        <div class="project-content">
+            <div class="image-with-caption">
+                <img src="png2jpg/Schematic for PCB.jpg" alt="Altium Schematic">
+                <div class="caption">Complete circuit schematic designed in Altium Designer</div>
+            </div>
+            
+            <div class="image-container">
+                <div class="image-with-caption">
+                    <img src="png2jpg/2D PCB.jpg" alt="Altium PCB Layout 2D">
+                    <div class="caption">2D PCB layout showing trace routing and component placement</div>
+                </div>
+                <div class="image-with-caption">
+                    <img src="png2jpg/3D PCB.jpg" alt="Altium PCB Layout 3D">
+                    <div class="caption">3D visualization of the final PCB design</div>
+                </div>
+            </div>
+            <h2>Project Overview</h2>
+            <p>Designed and simulated a functional printed circuit board (PCB) as part of a bootcamp project, demonstrating practical skills in circuit design, layout optimization, and digital fabrication preparation. The project highlighted proficiency in both electronics theory and applied PCB design using professional software tools.</p>
+
+            <div class="project-details">
+                <h3>Key Features</h3>
+                <ul>
+                    <li>Fully <b>designed schematics </b> with correct component placement and signal routing</li>
+                    <li><b>Optimized PCB layout</b> to minimize noise, crosstalk, and signal interference</li>
+                    <li>Prepared board for <b>fabrication-ready output, </b>including Gerber files</li>
+                    <li>Simulated circuits to <b>verify functionality </b>before physical production</li>
+                </ul>
+
+                <h3>Technical Implementation</h3>
+                <p>The PCB was created using <b>Altium Designer,</b> where schematics were drawn and <b>components were selected and placed</b> strategically to optimize performance. Signal traces were routed to minimize <b>electrical noise</b> and <b>interference,</b> and the board was <b>simulated</b> to verify proper functionality. <b>Design rules and constraints</b> were applied to ensure the PCB would be fabrication-ready, and <b>Gerber files</b> were generated for potential production. Iterative testing of the schematic and layout allowed for <b>error detection and correction</b> before finalizing the board.</p>
+
+                
+                
+                <h3>Challenges & Solutions</h3>
+                <ul>
+                    <li><b>Complex signal routing:</b> The motor initially lacked power to lift the curtain. This was solved by designing and 3D-printing custom gears to increase torque.Managing multiple connections in a compact layout was difficult. This was solved by careful <b>layer planning and trace optimization.</b></li>
+                    <li><b>Component placement constraints:</b>Limited board space required strategic placement; iterative layout adjustments ensured proper fit and function.</li>
+                    <li><b>Simulation accuracy:</b> Ensuring simulated behavior matched expected performance required repeated <b>verification and tweaking</b> of circuit parameters. </li>
+                </ul>
+
+                    <h3>Results</h3>
+                <p>The final PCB design was fully <b>simulation-verified</b> and <b>ready for fabrication,</b> demonstrating strong proficiency <b>in circuit design, PCB layout, and electronic system integration.</b> The project showcased the ability to <b>apply theoretical knowledge in a practical, industry-standard design environment.</b></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

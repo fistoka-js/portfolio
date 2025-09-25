@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LED Pong Game - Project Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+            color: #222;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+        .project-header {
+            background: #124688;
+            color: white;
+            padding: 1rem 0;
+            margin-bottom: 1rem;
+        }
+        .project-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 1rem;
+            color: #000000;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        .project-details {
+            margin: 2rem 0;
+        }
+        .tech-stack {
+            background: #f8f9fa;
+            padding: 0;
+            border-radius: 4px;
+            margin: 0 0;
+        }
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            margin: 1rem 0;
+            background: #000;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        .video-container video,
+        .video-container iframe {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            transform: translate(-50%, -50%);
+            object-fit: contain;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="project-header">
+        <div class="container">
+            <h1>LED Pong Game</h1>
+        </div>
+    </div>
+    
+    <div class="container">
+        <a href="Website.html" class="back-link">← Back to Portfolio</a>
+        
+        <div class="project-content">
+            <div class="video-container">
+                <video
+                    src="ProjectVideos/IMG_9546.mp4"
+                    title="LED Pong Game"
+                    controls
+                    playsinline>
+                </video>
+            </div>
+            <h2>Project Overview</h2>
+            <p>Developed a playable Pong game on an <b>8x8 LED matrix,</b> programmed using <b>Arduino C++.</b> The project demonstrated <b>embedded game design, real-time user interaction, and efficient use of limited hardware resources.</b></p>
+            <div class="project-details">
+                <h3>Key Features</h3>
+                <ul>
+                    <li><b>Single-player Pong gameplay </b> with paddle cotnrolled via joystick.</li>
+                    <li><b>8x8 LED display</b> to visually represent the ball and paddles.</li>
+                    <li><b>Collision detection logic </b>for paddle hits and wall bounces.</li>
+                    <li>Adjustable<b> ball speed and difficulty scaling</b> for extended playability. </li>
+                </ul>
+
+                <h3>Technical Implementation</h3>
+                <p>The game was programmed in <b>C++ on an Arduino,</b> using an <b>8x8 LED matrix</b> to display the moving ball and paddle. A joystick was used to control paddle's movement. A main game loop handled <b>ball movement, collision detection, and score tracking.</b> Logic was added to increase ball speed over time, creating a dynamic challenge. The design required optimizing code to efficiently refresh the LED matrix while maintaining smooth gameplay.</p>
+
+                <div class="tech-stack">
+                    <h3>Technologies Used:</h3>
+                    <ul>
+                        <li> <b>Hardware:</b> Arduino microcontroller, 8x8 LED matrix, joystick. </li>
+                        <li><b>Software: </b>Arduino IDE (C++) for game logic and display control. </li>
+                        <li><b>Processes: </b>Game loop design, collision detection, matrix refresh optimization.</li>
+                    </ul>
+                </div>
+
+                <h3>Challenges & Solutions</h3>
+                <ul>
+                    <li><b>Display limitations: </b>The 8x8 matrix offered low resolution; overcame this by designing simplified paddle and ball representations.</li>
+                    <li><b>Smooth animation: </b>Early versions had flickering; solved by <b>optimizing LED refresh rates. </b></li>
+                    <li><b>Input responsiveness:</b> Early paddle controls felt sluggish; improved by refining input polling and reducing latency.</li>
+                </ul>
+
+                    <h3>Results</h3>
+                <p>The final game successfully delivered a <b>fully playable Pong experience</b> on an <b>8x8 LED matrix,</b> demonstrating skills in <b>embedded programming, game logic design, and hardware interfacing</b> under hardware constraints.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

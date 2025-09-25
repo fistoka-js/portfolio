@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>3D-Printed Coin Dispenser - Project Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+            color: #222;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+        .project-header {
+            background: #124688;
+            color: white;
+            padding: 1rem 0;
+            margin-bottom: 1rem;
+        }
+        .project-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 1rem;
+            color: #000000;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin: 1rem 0;
+        }
+        .project-details {
+            margin: 2rem 0;
+        }
+        .tech-stack {
+            background: #f8f9fa;
+            padding: 0;
+            border-radius: 4px;
+            margin: 0 0;
+        }
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            margin: 1rem 0;
+            background: #000;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        .video-container video,
+        .video-container iframe {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            transform: translate(-50%, -50%);
+            object-fit: contain;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="project-header">
+        <div class="container">
+            <h1>3D-Printed Coin Dispenser</h1>
+        </div>
+    </div>
+    
+    <div class="container">
+        <a href="Website.html" class="back-link">← Back to Portfolio</a>
+        
+        <div class="project-content">
+            <div class="video-container">
+                <video
+                    src="ProjectVideos/IMG_1553.mp4"
+                    title="Coin Dispenser Demo"
+                    controls
+                    playsinline>
+                </video>
+            </div>
+            <img src="png2jpg/Screenshot 2025-09-23 130327.jpg" alt="3D Design of Coin Dispenser">
+            <h2>Project Overview</h2>
+            <p>Designed and built an automated coin dispenser with a 3D-printed enclosure and a motorized pushing mechanism. The project integrated mechanical design, electronics, and embedded programming to create a functional device that demonstrates precision control and automation.</p>
+            <div class="project-details">
+                <h3>Key Features</h3>
+                <ul>
+                    <li><b>Automated dispensing </b>of coins via a servo-driven pusher mechanism.</li>
+                    <li>Custom <b>3D-printed container</b> for durability and precise component alignment.</li>
+                    <li>Integration of <b>ultrasonic sensors </b>to detect user input for dispensing coins.</li>
+                    <li>Reliable and repeatable operation for consistent coin output.</li>
+                </ul>
+
+                <h3>Technical Implementation</h3>
+                <p>The coin dispenser was built around a <b>servo motor</b> connected to a <b>gear-driven pusher</b> that releases coins from a container. An <b>ultrasonic sensor</b> detects when a hand is present, triggering the motor via an <b>Arduino microcontroller programmed in C++.</b> The enclosure was <b>designed in CAD and 3D-printed,</b> ensuring precise alignment of components. Connections were established with breadboard wiring to maintain flexibility during testing. Iterative testing and adjustment optimized the timing and motor movement to ensure smooth dispensing without jamming. </p>
+
+                <div class="tech-stack">
+                    <h3>Technologies Used:</h3>
+                    <ul>
+                        <li> <b>Hardware:</b> Arduino microcontroller, servo motor, ultrasonic sensor, custom 3D-printed parts. </li>
+                        <li><b>Software: </b>Arduino IDE (C++) for programming control logic. </li>
+                        <li><b>Design:</b> Fusion360 CAD, Tinkercad</li>
+                        <li><b>Fabrication: </b>3D printing for container, breadboard wiring for prototyping.</li>
+                    </ul>
+                </div>
+
+                <h3>Challenges & Solutions</h3>
+                <ul>
+                    <li><b>Coin jamming: </b> Initial mechanism sometimes stuck; solved by redesigning the pusher geometry and adjusting alignment.</li>
+                    <li><b>Timing precision: </b>Motor movement needed fine-tuning; resolved by calibrating the Arduino code for accurate dispense cycles.</li>
+                    <li><b>Stability and durability:</b> Breadboard connections initially shifted during testing; ensured reliable operation by carefully securing components and wiring.</li>
+                </ul>
+
+                    <h3>Results</h3>
+                <p>The final prototype successfully <b>dispensed coins on demand,</b> demonstrating smooth, reliable operation and effective integration of <b>mechanical, electronic, and programming components.</b> The project showcased practical skills in <b>automation, CAD-based design, and embedded system control.</b></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
