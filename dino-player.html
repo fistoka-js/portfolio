@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Autonomous Google Dino Game Player - Project Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+            color: #222;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+        .project-header {
+            background: #124688;
+            color: white;
+            padding: 1rem 0;
+            margin-bottom: 1rem;
+        }
+        .project-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 1rem;
+            color: #000000;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        .project-details {
+            margin: 2rem 0;
+        }
+        .tech-stack {
+            background: #f8f9fa;
+            padding: 0;
+            border-radius: 4px;
+            margin: 0 0;
+        }
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            margin: 1rem 0;
+            background: #000;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        .video-container video,
+        .video-container iframe {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            transform: translate(-50%, -50%);
+            object-fit: contain;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="project-header">
+        <div class="container">
+            <h1>Autonomous Google Dino Game Player</h1>
+        </div>
+    </div>
+    
+    <div class="container">
+        <a href="Website.html" class="back-link">← Back to Portfolio</a>
+        
+        <div class="project-content">
+            <div class="video-container">
+                <video
+                    src="ProjectVideos/IMG_9808.mp4"
+                    title="Autonomous Google Dino Game Player"
+                    controls
+                    playsinline>
+                </video>
+            </div>
+            <h2>Project Overview</h2>
+            <p>Built an <b>autonomous system</b> that plays the Google Chrome Dino Game by using a <b>light sensor</b> to detect obstacles and a <b>motorized actuator</b> to press the spacebar. The project combined <b>computer vision, mechanical control, and automation,</b> showcasing how hardware can interact with software environments.</p>
+            <div class="project-details">
+                <h3>Key Features</h3>
+                <ul>
+                    <li><b>Automated gameplay </b>using a sensor to detect on-screen obstacles.</li>
+                    <li><b>Motor-driven actuator </b>to press the spacebar and control the Dino’s jump.</li>
+                    <li><b>Real-time obstacle detection </b>for responsive inputs.</li>
+                    <li>Integrated <b>hardware-software interaction</b> between sensor data and mechanical motion.</li>
+                </ul>
+
+                <h3>Technical Implementation</h3>
+                <p>The system used a <b>light sensor</b> to scan the game screen for incoming obstacles. When something was detected, an <b>Arduino microcontroller programmed in C++</b> triggered a <b>motorized actuator</b> that physically pressed the keyboard’s spacebar. Timing logic was implemented to ensure the jump occurred at the correct moment, with repeated calibration cycles to improve detection accuracy and response speed. The hardware was mounted securely to ensure <b>consistent actuation without mispressing keys.</b> </p>
+
+                <div class="tech-stack">
+                    <h3>Technologies Used:</h3>
+                    <ul>
+                        <li> <b>Hardware:</b> Arduino microcontroller, light sensor, DC motor/servo with actuator arm. </li>
+                        <li><b>Software: </b>Arduino IDE (C++) for sensor input processing and motor control. </li>
+                        <li><b>Design:</b> Fusion360 CAD, Tinkercad</li>
+                        <li><b>Processes: </b>Real-time detection, mechanical actuation design, calibration testing.</li>
+                    </ul>
+                </div>
+
+                <h3>Challenges & Solutions</h3>
+                <ul>
+                    <li><b>Detection accuracy: </b>Initial false positives/negatives from the sensor; solved by refining the detection threshold and calibrating sensor sensitivity.</li>
+                    <li><b>Timing precision: </b>Motor movement needed fine-tuning; resolved by calibrating the Arduino code for accurate dispense cycles.</li>
+                    <li><b>Mechanical reliability: </b>Early prototypes misaligned with the spacebar; resolved by redesigning the actuator mount for stability.</li>
+                </ul>
+
+                    <h3>Results</h3>
+                <p>The final system successfully <b>played the Dino Game autonomously,</b> consistently detecting obstacles and jumping at the correct time. The project highlighted practical skills in <b>automation, hardware-software integration, and creative mechanical design.</b></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

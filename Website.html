@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Project Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0; padding: 0;
+            background: #f4f4f4;
+            color: #222;
+        }
+        header {
+            position: relative;
+            height: 300px;
+            color: #fff;
+            text-align: center;
+            background-image: url('https://media.istockphoto.com/id/533353096/photo/complex-circuit-board-on-dark-surface.jpg?s=612x612&w=0&k=20&c=fLDnL_ZUHI3FshqZGRK0-u7sN9zs7G8PZm2_jboT6WY=');
+            background-size: cover;
+            background-position: center;
+        }
+        .header-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            padding: 6.75rem 0;
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay for better text visibility */
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        header   p {
+            margin: 1rem 0 0;
+            font-size: 1.2rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+        main {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        h1, h2 {
+            margin-top: 0;
+        }
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);  /* Changed to 2 columns */
+            gap: 1.5rem;
+            max-width: 100%;
+            margin: 0 auto;
+        }
+        .project {
+            background: #f9f9f9;
+            border-radius: 6px;
+            padding: 1rem;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+            transition: box-shadow 0.2s;
+        }
+        .project:hover {
+            box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+        }
+        .project-title {
+            margin: 0 0 0.5rem 0;
+            font-size: 1.2rem;
+            color: #1a73e8;
+        }
+        .project-desc {
+            margin: 0 0 1rem 0;
+            font-size: 1rem;
+        }
+        .project-link {
+            text-decoration: none;
+            color: #fff;
+            background: #1a73e8;
+            padding: 0.5em 1em;
+            border-radius: 4px;
+            font-size: 0.95rem;
+            transition: background 0.2s;
+        }
+        .project-link:hover {
+            background: #155ab6;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            color: #888;
+            font-size: 0.95rem;
+        }
+        .contact-links {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            z-index: 100;
+        }
+        .contact-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 1rem;
+            padding: 0.5rem;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 4px;
+            display: inline-block;
+            transition: background 0.2s;
+        }
+        .contact-links a:hover {
+            background: rgba(0, 0, 0, 0.7);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="contact-links">
+            <a href="https://www.linkedin.com/in/JacobSverdlin" target="_blank">LinkedIn</a>
+            <a href="mailto: jsverdli@uwaterloo.ca">Gmail</a>
+        </div>
+        <div class="header-content">
+            <h1>My Project Portfolio</h1>
+            <p>Showcasing my work and projects</p>
+        </div>
+    </header>
+    <main>
+        <h2>Projects</h2>
+        <div class="projects">
+             <div class="project">
+                <h3 class="project-title">Automated Window Curtain Opener</h3>
+                <p class="project-desc">Designed and built a motorized system controlled by sensors to automatically open and close a window curtain.</p>
+                <a class="project-link" href="curtain-opener.html" >View Project</a>
+            </div>
+            <div class="project">
+                <h3 class="project-title">Custom PCB Design in Altium</h3>
+                <p class="project-desc">Designed and simulated a functional circuit board, creating schematics, optimizing layout, and preparing for fabrication to demonstrate practical PCB design skills.</p>
+                <a class="project-link" href="pcb-design.html" >View Project</a>
+            </div>
+            <div class="project">
+                <h3 class="project-title">3D-Printed Coin Dispenser</h3>
+                <p class="project-desc">Designed and fabricated a coin dispenser with a custom 3D-printed enclosure, integrating a servo motor and ultrasonic sensor to deliver automated coin output.</p>
+                <a class="project-link" href="coin-dispenser.html" >View Project</a>
+            </div>
+            <div class="project">
+                <h3 class="project-title">Autonomous Google Dino Game Player</h3>
+                <p class="project-desc">Assembled a sensor-driven circuit that autonomously plays the Google Dino game by utilizing a servo motor, showcasing digital logic design, timing control, and system integration.</p>
+                <a class="project-link" href="dino-player.html" >View Project</a>
+            </div>
+            <div class="project">
+                <h3 class="project-title">Ping Pong Game on LED Matrix</h3>
+                <p class="project-desc">Programmed and assembled a single-player Ping Pong game on an 8×8 LED matrix, demonstrating embedded programming, hardware/software interaction, and user interface design.</p>
+                <a class="project-link" href="led-pong.html" >View Project</a>
+            </div>
+            <div class="project">
+                <h3 class="project-title">Memory Challenge with Light Bulbs</h3>
+                <p class="project-desc">Developed a logic-based memory game using bulb sequencing and user input recognition, applying circuit design, debugging, and iterative prototyping.</p>
+                <a class="project-link" href="memory-game.html" >View Project</a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        &copy; 2025 Jacob Sverdlin. All rights reserved.
+    </footer>
+</body>
+</html>
