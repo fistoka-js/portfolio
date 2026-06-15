@@ -112,18 +112,28 @@
 
         <div class="project-content">
 
+            <!-- PLACE IMAGE HERE: photo of the full wearable/armband from the outside -->
+            <!-- <img src="png2jpg/wearable-front.jpg" alt="Delirium Prevention Wearable"> -->
+
+            <!-- PLACE VIDEO HERE: demo video of the device in action -->
+            <!-- <video controls><source src="ProjectVideos/wearable-demo.mp4" type="video/mp4"></video> -->
+
             <h2>Project Overview</h2>
             <p>
-                Hospital delirium is a serious condition affecting patients — particularly elderly patients — who lose track of time, 
-                become disoriented, and miss routine activities like eating and exercise. This wearable device, built as part of 
-                ECE 198 at the University of Waterloo, combats delirium by delivering timely reminders to patients through an 
-                OLED display and audio speaker. The patient wears the device on their wrist, sets the time using a rotary dial, 
-                and receives prompts to eat and exercise at appropriate intervals — all without needing a phone or external device.
+                Hospital delirium is a serious condition affecting patients, particularly elderly patients, who lose track of time,
+                become disoriented, and miss routine activities like eating and exercise. This wearable device, built as part of
+                ECE 198 at the University of Waterloo, combats delirium by delivering timely reminders to patients through an
+                OLED display and audio speaker. The patient wears the device on their wrist, sets the time using a rotary dial,
+                and receives prompts to eat and exercise at appropriate intervals without needing a phone or external device.
             </p>
 
             <div class="project-details">
 
                 <h3>Hardware Components</h3>
+
+                <!-- PLACE IMAGE HERE: photo of all components laid out before assembly -->
+                <!-- <img src="png2jpg/components-layout.jpg" alt="Hardware components"> -->
+
                 <div class="components-grid">
                     <div class="component-card">
                         <h4>Arduino UNO R4 Minima (Renesas RA4M1)</h4>
@@ -143,7 +153,7 @@
                     </div>
                     <div class="component-card">
                         <h4>Speaker + Amplifier Module</h4>
-                        <p>Delivers audio reminders to the patient — prompting them to eat or exercise at configured intervals.</p>
+                        <p>Delivers audio reminders to the patient, prompting them to eat or exercise at configured intervals.</p>
                     </div>
                     <div class="component-card">
                         <h4>3D-Printed Armband Enclosure</h4>
@@ -151,35 +161,41 @@
                     </div>
                 </div>
 
+                <!-- PLACE IMAGE HERE: photo of the circuit/breadboard wiring or inside the enclosure -->
+                <!-- <img src="png2jpg/wearable-internals.jpg" alt="Internal wiring and circuit"> -->
+
                 <h3>How It Works</h3>
                 <div class="flow-diagram">
-                    <div class="flow-step"><span class="flow-arrow">▶</span> Device powers on, patient sets time via rotary potentiometer</div>
-                    <div class="flow-step"><span class="flow-arrow">↓</span> Internal clock begins tracking time using custom arithmetic firmware</div>
-                    <div class="flow-step"><span class="flow-arrow">↓</span> ADXL335 continuously reads 3-axis acceleration, noise suppressed via threshold</div>
-                    <div class="flow-step"><span class="flow-arrow">↓</span> If 30+ minutes elapsed → OLED + speaker prompt patient to eat</div>
-                    <div class="flow-step"><span class="flow-arrow">↓</span> If activity threshold not met → OLED + speaker prompt patient to exercise</div>
-                    <div class="flow-step"><span class="flow-arrow">↓</span> 1 potentiometer click → shows current time</div>
-                    <div class="flow-step"><span class="flow-arrow">↓</span> 3 potentiometer clicks → displays instructions</div>
-                    <div class="flow-step"><span class="flow-arrow">↺</span> Loop continues, monitoring activity and time</div>
+                    <div class="flow-step"><span class="flow-arrow">&#9654;</span> Device powers on, patient sets time via rotary potentiometer</div>
+                    <div class="flow-step"><span class="flow-arrow">&#8595;</span> Internal clock begins tracking time using custom arithmetic firmware</div>
+                    <div class="flow-step"><span class="flow-arrow">&#8595;</span> ADXL335 continuously reads 3-axis acceleration, noise suppressed via threshold</div>
+                    <div class="flow-step"><span class="flow-arrow">&#8595;</span> If 30+ minutes elapsed: OLED + speaker prompt patient to eat</div>
+                    <div class="flow-step"><span class="flow-arrow">&#8595;</span> If activity threshold not met: OLED + speaker prompt patient to exercise</div>
+                    <div class="flow-step"><span class="flow-arrow">&#8595;</span> 1 potentiometer click: shows current time</div>
+                    <div class="flow-step"><span class="flow-arrow">&#8595;</span> 3 potentiometer clicks: displays instructions</div>
+                    <div class="flow-step"><span class="flow-arrow">&#8635;</span> Loop continues, monitoring activity and time</div>
                 </div>
 
                 <h3>Firmware Implementation</h3>
                 <p>
-                    All firmware was written in <strong>embedded C++</strong> on the Arduino UNO R4. The core challenge was 
-                    managing multiple peripherals simultaneously without an RTOS — achieved through interrupt-driven state 
+                    All firmware was written in <strong>embedded C++</strong> on the Arduino UNO R4. The core challenge was
+                    managing multiple peripherals simultaneously without an RTOS, achieved through interrupt-driven state
                     management across the OLED, speaker, accelerometer, and potentiometer inputs.
                 </p>
                 <p>
-                    The time-keeping system required custom clock arithmetic to handle hours, minutes, and seconds accurately 
-                    while the potentiometer could adjust the hour at any point. Accelerometer noise was suppressed by sampling 
+                    The time-keeping system required custom clock arithmetic to handle hours, minutes, and seconds accurately
+                    while the potentiometer could adjust the hour at any point. Accelerometer noise was suppressed by sampling
                     multiple readings and applying a configurable motion threshold before triggering any output.
                 </p>
+
+                <!-- PLACE IMAGE HERE: CAD render or photo of the 3D-printed enclosure from Fusion 360 -->
+                <!-- <img src="png2jpg/wearable-cad.jpg" alt="Fusion 360 CAD design"> -->
 
                 <div class="tech-stack">
                     <h3>Technologies Used:</h3>
                     <ul>
                         <li><b>Microcontroller:</b> Arduino UNO R4 Minima (Renesas RA4M1)</li>
-                        <li><b>Firmware:</b> Embedded C++ — interrupt-driven state management, custom clock arithmetic, noise suppression</li>
+                        <li><b>Firmware:</b> Embedded C++, interrupt-driven state management, custom clock arithmetic, noise suppression</li>
                         <li><b>Communication Protocols:</b> I2C (OLED display)</li>
                         <li><b>Sensors:</b> ADXL335 3-axis accelerometer, rotary potentiometer</li>
                         <li><b>Output:</b> SSD1306 OLED display, speaker + amplifier module</li>
@@ -191,33 +207,37 @@
                 <h3>Challenges & Solutions</h3>
                 <ul>
                     <li>
-                        <b>Multi-peripheral state management without RTOS:</b> Coordinating the OLED, speaker, accelerometer, 
-                        and potentiometer simultaneously required careful interrupt-driven design to avoid blocking delays 
+                        <b>Multi-peripheral state management without RTOS:</b> Coordinating the OLED, speaker, accelerometer,
+                        and potentiometer simultaneously required careful interrupt-driven design to avoid blocking delays
                         stalling other inputs.
                     </li>
                     <li>
-                        <b>Accelerometer noise:</b> Raw analog readings from the ADXL335 were noisy and triggered false 
-                        motion detections. Solved by sampling multiple readings and applying a configurable threshold 
+                        <b>Accelerometer noise:</b> Raw analog readings from the ADXL335 were noisy and triggered false
+                        motion detections. Solved by sampling multiple readings and applying a configurable threshold
                         before registering activity.
                     </li>
                     <li>
-                        <b>Clock drift from potentiometer adjustment:</b> Allowing the user to change the hour mid-session 
-                        required careful arithmetic to avoid minutes and seconds miscalculating. Custom offset tracking 
+                        <b>Clock drift from potentiometer adjustment:</b> Allowing the user to change the hour mid-session
+                        required careful arithmetic to avoid minutes and seconds miscalculating. Custom offset tracking
                         variables were introduced to maintain accuracy across adjustments.
                     </li>
                     <li>
-                        <b>Enclosure fit:</b> Fitting all components — board, display, speaker, and wiring — into a 
-                        wrist-worn form factor required several Fusion 360 iterations and prototype prints to achieve 
+                        <b>Enclosure fit:</b> Fitting all components including the board, display, speaker, and wiring into a
+                        wrist-worn form factor required several Fusion 360 iterations and prototype prints to achieve
                         a clean, wearable result.
                     </li>
                 </ul>
 
                 <h3>Results</h3>
+
+                <!-- PLACE IMAGE HERE: photo of the finished wearable being worn, or OLED showing time/instructions -->
+                <!-- <img src="png2jpg/wearable-worn.jpg" alt="Wearable in use"> -->
+
                 <p>
-                    The final prototype successfully delivers time-based eating and exercise reminders through both 
-                    visual (OLED) and audio (speaker) output, with reliable patient-facing time display and instruction 
-                    prompts accessible via the rotary dial. The device operates fully standalone — no phone, app, or 
-                    external connection required — making it suitable for a real hospital ward environment.
+                    The final prototype successfully delivers time-based eating and exercise reminders through both
+                    visual (OLED) and audio (speaker) output, with reliable patient-facing time display and instruction
+                    prompts accessible via the rotary dial. The device operates fully standalone with no phone, app, or
+                    external connection required, making it suitable for a real hospital ward environment.
                 </p>
             </div>
         </div>
